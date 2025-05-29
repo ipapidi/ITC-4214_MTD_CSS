@@ -1,1 +1,334 @@
 
+/* Reset and Base Layout */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    line-height: 1.6;
+    background: url('../images/background.png') no-repeat center center fixed;
+    background-size: cover;
+    color: #2e2b23;
+    padding: 20px;
+}
+
+.site-wrapper {
+    max-width: 960px;
+    margin: 0 auto;
+    background: #fce7bd;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Medieval Stock Ticker */
+.ticker-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #fff4d6;
+    border: 3px double #a67c00;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+.ticker {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+}
+
+.ticker__content {
+    display: inline-block;
+    padding-left: 100%;
+    animation: ticker-scroll 40s linear infinite;
+    font-weight: bold;
+    color: #5c1a00;
+    font-family: 'Georgia', serif;
+    font-size: 1rem;
+}
+
+/* Smooth medieval scroll animation */
+@keyframes ticker-scroll {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Header */
+.site-header {
+    margin-bottom: 20px;
+}
+
+.site-header__top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.site-header__logo img {
+    width: 25%;
+    min-width: 150px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.site-header__tagline {
+    font-style: italic;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.site-header__nav {
+    margin-bottom: 10px;
+}
+
+.site-header__nav a {
+    color: #5a3e1b;
+    text-decoration: none;
+    margin: 0 5px;
+    padding: 6px 10px;
+    border-radius: 4px;
+}
+
+.site-header__nav a.active {
+    background-color: #d6b47c;
+    color: black;
+    font-weight: bold;
+}
+
+/* Headings */
+.section-box__title {
+    font-size: 1.9rem;
+    color: #3e2c00;
+    margin: 20px 0 10px;
+    text-align: center;
+}
+
+.news-article__title {
+    font-size: 1.5rem;
+    color: #321c00;
+    text-align: center;
+    margin: 12px 0 6px;
+}
+
+/* Article Layout */
+.news-article__image {
+    width: 60%;
+    display: block;
+    margin: 10px auto;
+    border-radius: 6px;
+}
+
+/* View Navigation */
+.news-section__nav p {
+    text-align: left;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+/* Table */
+.events-section__table table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    background-color: #f6e2b3; /* slightly deeper than the body bg */
+    border: 2px solid #b28b4e;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.events-section__table th,
+.events-section__table td {
+    border: 1px solid #d3af70;
+    padding: 12px;
+    text-align: left;
+    background-color: #fdf4da;
+    color: #3b2a14;
+    font-family: 'Georgia', serif;
+}
+/* Quote */
+.quote-section__quote {
+    border-left: 5px solid #a67c00;
+    padding: 15px 20px;
+    margin: 30px 0;
+    font-style: italic;
+    background-color: #f9e8c2;
+    border-radius: 6px;
+    color: #4a3212;
+    box-shadow: 0 0 6px rgba(0,0,0,0.05);
+}
+
+/* Form Container */
+form {
+    background-color: #fdf0ce; /* parchment beige */
+    padding: 25px;
+    border: 2px solid #c7a765;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 30px auto;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Label and Legend */
+form label,
+form legend {
+    font-weight: bold;
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    color: #4a3212;
+    font-family: 'Georgia', serif;
+}
+
+/* Input Fields */
+form input[type="text"],
+form input[type="email"],
+form input[type="date"],
+form select,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 4px;
+    border: 1px solid #b68a50;
+    border-radius: 5px;
+    background-color: #fff8e3;
+    color: #3b2a14;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+/* Fieldset Styling */
+form fieldset {
+    border: 1px solid #d2b273;
+    border-radius: 6px;
+    padding: 15px;
+    margin-top: 20px;
+    background-color: #fcf3d9;
+}
+
+/* Radio Buttons Label */
+form fieldset label {
+    display: inline-block;
+    margin-left: 8px;
+    font-weight: normal;
+    color: #3b2a14;
+}
+
+/* Submit Button */
+form input[type="submit"] {
+    display: block;
+    margin: 25px auto 0 auto;
+    padding: 10px 25px;
+    background-color: #8b0000;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+    background-color: #a31616;
+}
+
+/* Footer */
+.site-footer {
+    text-align: center;
+    margin-top: 40px;
+    color: #6a5d3f;
+    font-size: 0.9em;
+}
+
+/* Responsive Tweak */
+@media (min-width: 768px) {
+    .site-header__top {
+        flex-direction: column;
+    }
+}
+
+/* Position night mode button in corner */
+.darkmode-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #3a2d1c;
+    color: #fcefb4;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+    z-index: 1001;
+    transition: background 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.darkmode-button:hover {
+    background-color: #2c2013;
+}
+/* Overlay Setup */
+.darkmode-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.95);
+    color: #fcefb4;
+    font-family: 'Georgia', serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease;
+}
+
+/* Message Box */
+.darkmode-message {
+    text-align: center;
+    background: #1b130b;
+    padding: 30px;
+    border: 2px solid #fcefb4;
+    border-radius: 10px;
+    max-width: 400px;
+    box-shadow: 0 0 15px #000;
+}
+
+.darkmode-message p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.darkmode-exit {
+    display: inline-block;
+    background-color: #fcefb4;
+    color: #3a2d1c;
+    padding: 8px 14px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Show overlay when checkbox is checked */
+#fake-darkmode-toggle:checked + label + .darkmode-overlay {
+    opacity: 1;
+    pointer-events: all;
+}
+
+
