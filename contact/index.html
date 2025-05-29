@@ -3,105 +3,121 @@
 <head>
     <meta charset="UTF-8">
     <title>Send a Raven – Medieval Times Daily</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
+    <div class="site-wrapper">
 
-    <!-- Scrolling news banner displaying important updates -->
-    <marquee behavior="scroll" direction="left" scrollamount="3">
-        ⚔️ DRAGON WARNING IN EFFECT ⚔️ West Forest closed by royal decree! ⸺
-        🪙 Grain Prices Up: 2 sacks per gold! ⸺
-        🍗 Chicken Futures Slump After Jousting Scandal! ⸺
-        🧙 Wizard Guild Demands Pay in Rare Herbs! ⸺
-        🍺 Mead Stock Soars After Royal Wedding! ⸺
-        🐐 Goatcoin Crashes 30% After Shepherd Uprising!
-    </marquee>
+        <!-- Medieval Ticker -->
+        <div class="ticker-wrapper">
+            <div class="ticker">
+                <div class="ticker__content">
+                    ⚔️ DRAGON WARNING IN EFFECT ⚔️ West Forest closed by royal decree! ⸺
+                    🪙 Grain Prices Up: 2 sacks per gold! ⸺
+                    🍗 Chicken Futures Slump After Jousting Scandal! ⸺
+                    🧙 Wizard Guild Demands Pay in Rare Herbs! ⸺
+                    🍺 Mead Stock Soars After Royal Wedding! ⸺
+                    🐐 Goatcoin Crashes 30% After Shepherd Uprising!
+                </div>
+            </div>
+        </div>
 
-    <!-- Header with logo, title, and navigation menu -->
-    <header>
-        <!-- Logo linking back to the homepage -->
-        <a href="../index.html">
-            <img src="../assets/images/logo.png" alt="Medieval Times Daily Logo" width="250">
-        </a>
+        <!-- Header -->
+        <header class="site-header">
+            <div class="site-header__top">
+                <div class="site-header__logo">
+                    <a href="../index.html">
+                        <img src="../assets/images/logo.png" alt="Medieval Times Daily Logo">
+                    </a>
+                </div>
+                <div class="site-header__tagline">
+                    <p><em>"Truth, Gossip, and Dragon Sightings Since 1066"</em></p>
+                </div>
+                <div class="site-header__nav">
+                    <nav>
+                        <p>
+                            <a href="../index.html">Home</a> |
+                            <a href="../about/index.html">About the Scribes</a> |
+                            <a href="index.html" class="active">Send a Raven</a>
+                        </p>
+                    </nav>
+                </div>
+            </div>
+            <hr>
+        </header>
 
-        <!-- Page-specific title -->
-        <h1>Send a Raven</h1>
+        <!-- Main Content -->
+        <main class="site-main">
 
-        <!-- Navigation menu -->
-        <nav>
-            <p>
-                <a href="../index.html">Home</a> |
-                <a href="../about/index.html">About the Scribes</a> |
-                <a href="index.html">Send a Raven</a>
-            </p>
-        </nav>
-        <hr>
-    </header>
+            <!-- Contact Form Section -->
+            <div class="section-box form-section">
+                <h2 class="section-box__title">Write to the Royal Scribery</h2>
+                <form>
+                    <label for="name">Thy Name:</label><br>
+                    <input type="text" id="name" name="name" required><br><br>
 
-    <!-- Main content area -->
-    <main>
+                    <label for="email">Scroll Address (email):</label><br>
+                    <input type="email" id="email" name="email" required><br><br>
 
-        <!-- Contact form section -->
-        <section>
-            <h2>Write to the Royal Scribery</h2>
-            <form>
-                <label for="name">Thy Name:</label><br>
-                <input type="text" id="name" name="name" required><br><br>
+                    <label for="message">Thy Message:</label><br>
+                    <textarea id="message" name="message" rows="6" cols="40"></textarea><br><br>
 
-                <label for="email">Scroll Address (email):</label><br>
-                <input type="email" id="email" name="email" required><br><br>
+                    <fieldset>
+                        <legend>Who art thou?</legend>
 
-                <!-- Text box -->
-                <label for="message">Thy Message:</label><br>
-                <textarea id="message" name="message" rows="6" cols="40"></textarea><br><br>
+                        <input type="radio" id="noble" name="identity" value="noble">
+                        <label for="noble">A noble of the realm</label><br>
 
-                <!-- Radio buttons -->
-                <fieldset>
-                    <legend>Who art thou?</legend>
+                        <input type="radio" id="peasant" name="identity" value="peasant">
+                        <label for="peasant">A humble peasant</label><br>
 
-                    <input type="radio" id="noble" name="identity" value="noble">
-                    <label for="noble">A noble of the realm</label><br>
+                        <input type="radio" id="wizard" name="identity" value="wizard">
+                        <label for="wizard">A wizard (level 3+ only)</label><br>
 
-                    <input type="radio" id="peasant" name="identity" value="peasant">
-                    <label for="peasant">A humble peasant</label><br>
+                        <input type="radio" id="bard" name="identity" value="bard">
+                        <label for="bard">A bard in search of tales</label><br>
 
-                    <input type="radio" id="wizard" name="identity" value="wizard">
-                    <label for="wizard">A wizard (level 3+ only)</label><br>
+                        <input type="radio" id="dragon" name="identity" value="dragon">
+                        <label for="dragon">A dragon (no judgment)</label>
+                    </fieldset><br>
 
-                    <input type="radio" id="bard" name="identity" value="bard">
-                    <label for="bard">A bard in search of tales</label><br>
+                    <label for="date">When shall thy raven depart?</label><br>
+                    <input type="date" id="date" name="date"><br><br>
 
-                    <input type="radio" id="dragon" name="identity" value="dragon">
-                    <label for="dragon">A dragon (no judgment)</label>
-                </fieldset><br>
+                    <input type="submit" value="Send Raven">
+                </form>
+            </div>
 
-                <!-- Date Picker --> 
-                <label for="date">When shall thy raven depart?</label><br>
-                <input type="date" id="date" name="date"><br><br>
+            <!-- FAQ Section -->
+            <div class="section-box faq-section">
+                <h2 class="section-box__title">FAQs</h2>
+                <details>
+                    <summary>How long doth it take a raven to deliver a scroll?</summary>
+                    <p>Between 1 to 3 moons, depending on wind and owl interference.</p>
+                </details>
 
-                <input type="submit" value="Send Raven">
-            </form>
-        </section>
+                <details>
+                    <summary>Can I request a bard instead of a raven?</summary>
+                    <p>Only if thou provides lodging and at least one hot stew.</p>
+                </details>
+            </div>
+        </main>
 
-        <!-- FAQs using collapsible elements -->
-        <section>
-            <h2>FAQs</h2>
-            <details>
-                <summary>How long doth it take a raven to deliver a scroll?</summary>
-                <p>Between 1 to 3 moons, depending on wind and owl interference.</p>
-            </details>
+        <!-- Footer -->
+        <footer class="site-footer">
+            <hr>
+            <p>© 1425 Medieval Times Daily | All scrolls reserved.</p>
+            <input type="checkbox" id="fake-darkmode-toggle" hidden>
+            <label for="fake-darkmode-toggle" class="darkmode-button">🌘</label>
 
-            <details>
-                <summary>Can I request a bard instead of a raven?</summary>
-                <p>Only if thou provides lodging and at least one hot stew.</p>
-            </details>
-        </section>
-    </main>
+            <div class="darkmode-overlay">
+              <div class="darkmode-message">
+                <p>There’s no electricity in 1425, peasant.</p>
+                <label for="fake-darkmode-toggle" class="darkmode-exit">🔆 Return to the light</label>
+              </div>
+            </div>
+        </footer>
 
-    <!-- Footer -->
-    <footer>
-        <hr>
-        <p>© 1425 Medieval Times Daily | All scrolls reserved.</p>
-    </footer>
-
+    </div>
 </body>
 </html>
