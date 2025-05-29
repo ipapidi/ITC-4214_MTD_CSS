@@ -3,100 +3,114 @@
 <head>
     <meta charset="UTF-8">
     <title>About the Scribes – Medieval Times Daily</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
+    <div class="site-wrapper">
 
-    <!-- Scrolling news banner displaying important updates -->
-    <marquee behavior="scroll" direction="left" scrollamount="3">
-        ⚔️ DRAGON WARNING IN EFFECT ⚔️ West Forest closed by royal decree! ⸺
-        🪙 Grain Prices Up: 2 sacks per gold! ⸺
-        🍗 Chicken Futures Slump After Jousting Scandal! ⸺
-        🧙 Wizard Guild Demands Pay in Rare Herbs! ⸺
-        🍺 Mead Stock Soars After Royal Wedding! ⸺
-        🐐 Goatcoin Crashes 30% After Shepherd Uprising!
-    </marquee>
+        <!-- Stock Ticker Banner -->
+        <div class="ticker-wrapper">
+            <div class="ticker">
+                <div class="ticker__content">
+                    ⚔️ DRAGON WARNING IN EFFECT ⚔️ West Forest closed by royal decree! ⸺
+                    🪙 Grain Prices Up: 2 sacks per gold! ⸺
+                    🍗 Chicken Futures Slump After Jousting Scandal! ⸺
+                    🧙 Wizard Guild Demands Pay in Rare Herbs! ⸺
+                    🍺 Mead Stock Soars After Royal Wedding! ⸺
+                    🐐 Goatcoin Crashes 30% After Shepherd Uprising!
+                </div>
+            </div>
+        </div>
 
-    <!-- Page header with logo and navigation -->
-    <header>
-        <!-- Clickable logo linking back to the homepage -->
-        <a href="../index.html">
-            <img src="../assets/images/logo.png" alt="Medieval Times Daily Logo" width="250">
-        </a>
+        <!-- Page Header -->
+        <header class="site-header">
+            <div class="site-header__top">
+                <div class="site-header__logo">
+                    <a href="../index.html">
+                        <img src="../assets/images/logo.png" alt="Medieval Times Daily Logo">
+                    </a>
+                </div>
+                <div class="site-header__tagline">
+                    <p><em>"Truth, Gossip, and Dragon Sightings Since 1066"</em></p>
+                </div>
+                <div class="site-header__nav">
+                    <nav>
+                        <p>
+                            <a href="../index.html">Home</a> |
+                            <a href="index.html" class="active">About the Scribes</a> |
+                            <a href="../contact/index.html">Send a Raven</a>
+                        </p>
+                    </nav>
+                </div>
+            </div>
+            <hr>
+        </header>
 
-        <!-- Page-specific title -->
-        <h1>About the Scribes</h1>
+        <!-- Main Content -->
+        <main class="site-main">
 
-        <!-- Navigation menu -->
-        <nav>
-            <p>
-                <a href="../index.html">Home</a> |
-                <a href="index.html">About the Scribes</a> |
-                <a href="../contact/index.html">Send a Raven</a>
-            </p>
-        </nav>
-        <hr>
-    </header>
+            <div class="section-box">
+                <h2 class="section-box__title">Meet Our Esteemed Writers</h2>
+                <ul>
+                    <li><strong>Sir Quill Penworthy</strong> – Senior Dragon Correspondent</li>
+                    <li><strong>Dame Inkblot Featherwell</strong> – Gossip Columnist and Falcon Trainer</li>
+                    <li><strong>Bard T. Scrollson</strong> – Ballad Editor and Mead Critic</li>
+                </ul>
+            </div>
 
-    <!-- Main page content -->
-    <main>
+            <div class="section-box">
+                <h2 class="section-box__title">Our Mission</h2>
+                <p>
+                    At Medieval Times Daily, we pledge to deliver news across the kingdom — whether by parchment, 
+                    pigeon, or passing bard. From royal decrees to rogue sorcery sightings, our scribes 
+                    illuminate truth in even the darkest taverns.
+                </p>
+            </div>
 
-        <!-- Section listing the fictional editorial team -->
-        <section>
-            <h2>Meet Our Esteemed Writers</h2>
-            <ul>
-                <li><strong>Sir Quill Penworthy</strong> – Senior Dragon Correspondent</li>
-                <li><strong>Dame Inkblot Featherwell</strong> – Gossip Columnist and Falcon Trainer</li>
-                <li><strong>Bard T. Scrollson</strong> – Ballad Editor and Mead Critic</li>
-            </ul>
-        </section>
+            <div class="section-box quote-section">
+                <h2 class="section-box__title">Testimonial</h2>
+                <blockquote class="quote-section__quote">
+                    "I trust no scroll but the Daily. They once predicted my horse’s mood correctly."
+                    <br>– Lord Butterhelm of Eastbridge
+                </blockquote>
+            </div>
 
-        <!-- Section describing the mission statement -->
-        <section>
-            <h2>Our Mission</h2>
-            <p>
-                At Medieval Times Daily, we pledge to deliver news across the kingdom — whether by parchment, 
-                pigeon, or passing bard. From royal decrees to rogue sorcery sightings, our scribes 
-                illuminate truth in even the darkest taverns.
-            </p>
-        </section>
+            <div class="section-box form-section">
+                <h2 class="section-box__title">Join Our Order</h2>
+                <form>
+                    <label for="name">Thy Full Name:</label><br>
+                    <input type="text" id="name" name="name" required><br><br>
 
-        <!-- Section containing a fictional testimonial -->
-        <section>
-            <h2>Testimonial</h2>
-            <blockquote>
-                "I trust no scroll but the Daily. They once predicted my horse’s mood correctly."
-                <br>– Lord Butterhelm of Eastbridge
-            </blockquote>
-        </section>
-    </main><hr>
-    
-    <!-- Form section --> 
-    <section>
-        <h2>Join Our Order</h2>
-        <form>
-            <label for="name">Thy Full Name:</label><br>
-            <input type="text" id="name" name="name" required><br><br>
+                    <label for="email">Scroll Address (email):</label><br>
+                    <input type="email" id="email" name="email" required><br><br>
 
-            <label for="email">Scroll Address (email):</label><br>
-            <input type="email" id="email" name="email" required><br><br>
+                    <label for="skill">Choose thy skill:</label><br>
+                    <select id="skill" name="skill">
+                        <option>Potion Reviewer</option>
+                        <option>Witch Watcher</option>
+                        <option>Royal Beard Analyst</option>
+                    </select><br><br>
 
-            <!-- Dropdown select -->
-            <label for="skill">Choose thy skill:</label><br>
-            <select id="skill" name="skill">
-                <option>Potion Reviewer</option>
-                <option>Witch Watcher</option>
-                <option>Royal Beard Analyst</option>
-            </select><br><br>
+                    <input type="submit" value="Pledge Thy Quill">
+                </form>
+            </div>
+        </main>
 
-            <input type="submit" value="Pledge Thy Quill">
-        </form>
-    </section><br>
+        <!-- Footer -->
+        <footer class="site-footer">
+            <hr>
+            <p>© 1425 Medieval Times Daily | All scrolls reserved.</p>
+            <input type="checkbox" id="fake-darkmode-toggle" hidden>
+            <label for="fake-darkmode-toggle" class="darkmode-button">🌘</label>
 
-    <!-- Page footer -->
-    <footer>
-        <hr>
-        <p>© 1425 Medieval Times Daily | All scrolls reserved.</p>
-    </footer>
+            <div class="darkmode-overlay">
+              <div class="darkmode-message">
+                <p>There’s no electricity in 1425, peasant.</p>
+                <label for="fake-darkmode-toggle" class="darkmode-exit">🔆 Return to the light</label>
+              </div>
+            </div>
+        </footer>
 
+    </div>
 </body>
 </html>
